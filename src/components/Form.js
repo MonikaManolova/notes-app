@@ -34,7 +34,7 @@ console.log(note)
             <Button
                 disabled={!note.title || !note.description}
                 onClick={addNote}>
-                Add Note
+                Save
             </Button>
         </div>
     )
