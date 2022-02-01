@@ -1,38 +1,140 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  font-family: 'Roboto' !important;
+}
+
+
+/***** HEADER STYLES *****/
+.title{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #2F3945;
+  margin: 0;
+}
+.subtitle{
+  font-size: 16px;
+  line-height: 19px;
+  color: #546174;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+
+/***** FORM STYLES *****/
+.form-wrapper{
+  height: 100vh;
+  width: 440px;
+  background-color: #F4F7FB;
+  padding: 40px 30px;
+}
+form{
+  margin-top: 40px;
+}
+.form-control {
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 15px 16px;
+}
+textarea.form-control {
+  min-height: calc(1.5em + 6.5rem + 2px) !important;
+}
+form div{
+  margin-bottom: 30px;
+}
+.form-label{
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #546174;
+}
+.form-label span{
+  color: #FC5555;
+}
+::placeholder{
+  color: #A1A3A7 !important;
+}
+.btn-primary{
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  border-radius: 10px;
+  padding: 13px 10px;
+}
+
+
+/***** NOTES STYLES *****/
+.notes-wrapper{
+  width: calc(100% - 440px);
+  padding-top: 40px;
+  padding-right: 30px;
+  padding-left: 60px;
+}
+.notes-container{
+  padding: 0;
+  padding-top: 40px;
+}
+
+/***** SINGLE NOTE STYLES *****/
+.card{
+  border-radius: 10px;
+  border: 1px solid #D6DBE1;
+  margin-bottom: 30px;
+}
+.card-header{
+  background-color: transparent;
+  border-bottom: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-right: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #2F3945;
+}
+.note-title{
+  width: 100%;
+  cursor: pointer;
+}
+.action-btn{
+  height: 40px;
+  min-width: 40px;
+  border-radius: 6px;
+  border: 0;
+  padding: 0 12px;
+  background-color: #F4F7FB;
+  margin-right: 10px;
+  transition: all .1s linear;
+}
+.action-btn:hover{
+  background-color: #0d6efd;
+}
+.read-btn{
+  color: #546174;
+  width: max-content;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+.read-btn svg{
+  margin-left: 15px;
+  transition: all .2s ease-in-out;
+}
+.read-btn.active svg{
+  transform: rotate(180deg);
+}
+.read-btn:hover{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.action-btn:hover path{
+  fill: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-btn svg, .delete-btn svg{
+  position: relative;
+  bottom: 1.5px;
 }
