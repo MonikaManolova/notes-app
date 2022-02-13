@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: row;
-  font-family: 'Roboto' !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 
@@ -137,4 +137,13 @@ form div{
 .edit-btn svg, .delete-btn svg{
   position: relative;
   bottom: 1.5px;
+}
+
+button:disabled,
+button[disabled]{
+  pointer-events: none;
+}
+
+button:disabled svg path{
+  fill: #BDC9DC !important;
 }

@@ -3,12 +3,11 @@ import Title from './Title'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
-export default ({ note, setNote, addNote, updateNote }) => {
-console.log(note)
+export default ({ note, setNote, addNote }) => {
     return (
         <div className="form-wrapper">
             <Title
-                title='New Note'
+                title='Manage Notes'
                 subtitle='Fill up your note information in the form below.' />
             <Form>
                 {/* TITLE */}

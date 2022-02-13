@@ -51,7 +51,7 @@ function App() {
   const onDeleteClick = (note) => {
     const updatedNotes = notes.filter(currentNote => currentNote.id !== note.id)
     setNotes(updatedNotes)
-    console.log(updatedNotes)
+    note.id === singleNote.id && setSingleNote({})
   }
 
   return (
