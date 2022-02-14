@@ -3,7 +3,7 @@ import Title from './Title'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
-export default ({ note, setNote, addNote }) => {
+export default ({ note, setNote, saveNote }) => {
     return (
         <div className="form-wrapper">
             <Title
@@ -32,7 +32,7 @@ export default ({ note, setNote, addNote }) => {
             </Form>
             <Button
                 disabled={!note.title || !note.description}
-                onClick={addNote}>
+                onClick={saveNote}>
                 Save
             </Button>
         </div>

@@ -24,7 +24,7 @@ function App() {
   ])
   const [singleNote, setSingleNote] = useState({})
 
-  const addNote = () => {
+  const saveNote = () => {
     if (singleNote.id) {
       // EDIT EXISTING NOTE
       notes.map(note => {
@@ -63,7 +63,7 @@ function App() {
       <Form
         note={singleNote}
         setNote={setSingleNote}
-        addNote={addNote}
+        saveNote={saveNote}
       />
     </div>
   );
